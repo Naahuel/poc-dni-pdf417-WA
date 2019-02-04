@@ -27,6 +27,14 @@ p{
   transition: background-color .5s ease-out;
 }
 
+#result.error{
+  background-color: rgba(255,0,0,.3);
+}
+
+#result.success{
+  background-color: rgba(0,255,0,.3);
+}
+
 #result strong {
   display: inline-block;
   min-width: 100px;
