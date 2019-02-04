@@ -54,6 +54,8 @@ function scanBarcode() {
 
       var buffer = Module._malloc(fileData.length);
       Module.HEAPU8.set(fileData, buffer);
+      // El 3 atributo es el "Try Harder". Esto relentiza notablemente el procesamiento pero
+      // debería dar resultados más confiables
       var result = Module.readBarcodeFromPng(buffer, fileData.length, false, format);
       Module._free(buffer);
 
