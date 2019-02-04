@@ -54,7 +54,7 @@ function scanBarcode() {
 
       var buffer = Module._malloc(fileData.length);
       Module.HEAPU8.set(fileData, buffer);
-      var result = Module.readBarcodeFromPng(buffer, fileData.length, true, format);
+      var result = Module.readBarcodeFromPng(buffer, fileData.length, false, format);
       Module._free(buffer);
 
       if( result.text ) {
@@ -191,16 +191,14 @@ const startWebcam = () => {
 
 const mainLoop = () => {
   // Clear the canvas
-  ctx.clearRect(0, 0, _canvasWidth, _canvasHeight);
   ctx.globalAlpha = 1;
-  ctx.filter = "grayscale(100%) brightness(250%) contrast(250%)";
   ctx.drawImage(video, 0, 0, _canvasWidth, _canvasHeight);
 
   scanBarcode();
 }
 
 const startLoop = () => { 
-  setInterval(mainLoop, 500);
+  setInterval(mainLoop, 250);
 }
 
 // Iniciar loop al cargar video
