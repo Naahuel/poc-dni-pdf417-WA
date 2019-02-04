@@ -1,0 +1,15 @@
+{
+  "name": "poc-dni-pdf417-wa",
+  "version": "1.0.0",
+  "description": "Lector de códigos PDF417 para DNI Argentina",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve -s ./",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nahuel José",
+  "license": "ISC",
+  "dependencies": {
+    "serve": "^10.1.1"
+  }
+}
