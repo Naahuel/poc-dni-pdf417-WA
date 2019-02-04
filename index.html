@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>DNI PDF417</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="content-wrap">
+    <div id="result">
+      <strong>Nombre: </strong> %nombre% <br>
+      <strong>Apellido: </strong> %apellido% <br>
+      <strong>DNI: </strong> %dni% <br>
+      <strong>Sexo: </strong> %sexo% <br>
+      <strong>Fecha Nac: </strong> %fechaNac% <br>
+      <textarea>%raw%</textarea>
+    </div>
+    <button id="iniciar">Iniciar</button>
+    <div class="video-wrap">
+      <video playsinline autoplay id="dniVideo"></video>
+    </div>
+    <p>El código debe estar bien enfocado y horizontal, lo más paralelo a la imagen como sea posible. Acerque el código a la cámara y aléjelo lentamente hasta que haga foco.</p>
+  </div>
+
+
+  <script src="zxing.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
