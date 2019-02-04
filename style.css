@@ -65,8 +65,7 @@ p{
   position: absolute;
   z-index: 1;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%)
+  top: 0;
 }
 
 .video-wrap:after {
@@ -75,6 +74,8 @@ p{
   position: absolute;
   width: 100%;
   top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
   transform: translateY(-50%);
   border-bottom: 2px solid red;
   z-index: 2;

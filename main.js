@@ -22,6 +22,7 @@ let resultTemplate = resultP.innerHTML;
 
 // Crear elemento video e imagen
 const video = document.getElementById('dniVideo');
+const videoW = document.getElementById('video-wrap');
 const image = document.createElement('img');
 
 // Boton de inicio
@@ -194,7 +195,8 @@ const startWebcam = () => {
 const mainLoop = () => {
   // Clear the canvas
   ctx.globalAlpha = 1;
-  ctx.drawImage(video, 0, 0, _canvasWidth, _canvasHeight);
+  ctx.drawImage(video, 0, 0, _canvasWidth, video.videoHeight*_canvasWidth/video.videoWidth);
+  // ctx.drawImage(video, 0, 0, _canvasWidth, _canvasHeight);
 
   scanBarcode();
 }
@@ -205,8 +207,8 @@ const startLoop = () => {
 
 // Iniciar loop al cargar video
 video.addEventListener('loadedmetadata',function(){
-  _canvasWidth  = canvas.width = video.videoWidth;
-  _canvasHeight = canvas.height = video.videoHeight;
+  _canvasWidth  = canvas.width = videoW.offsetWidth;
+  _canvasHeight = canvas.height = videoW.offsetHeight;
   startLoop();
 });
 
