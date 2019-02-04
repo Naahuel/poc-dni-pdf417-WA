@@ -1,5 +1,5 @@
 # WebAssembly Bar Code Scanner
-JavaScript Bar Code scanner for the web using ZXing and WebAssembly.
+JavaScript Bar Code scanner for the web using ZXing ((CPP Port)[https://github.com/nu-book/zxing-cpp]) and WebAssembly.
 
 # Build (requires Emscripten)
 ```
