@@ -13,5 +13,7 @@ Este lector usa WebAssembly. Ver instrucciones para compilar en el repo de [ZXin
 
 # Build (requiere Emscripten)
 ```
-emconfigure cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE="./zxing-cpp/wrappers/wasm/Toolchain-Emscripten.cmake" -DEMSCRIPTEN_ROOT_PATH="$EMSDK" "./zxing-cpp/wrappers/wasm" -ENABLE_ENCODERS=0
+emconfigure cmake -G "Unix Makefiles" -ENABLE_ENCODERS=0 -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE="./zxing-cpp/wrappers/wasm/Toolchain-Emscripten.cmake" -DEMSCRIPTEN_ROOT_PATH="$EMSCRIPTEN" "./zxing-cpp/wrappers/wasm"
+
+emmake make
 ```
